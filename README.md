@@ -18,27 +18,3 @@ How to containerize a simple Python app with Docker
 Basic Kubernetes objects (Deployment, Service)
 How to deploy and expose a web app in Kubernetes
 Importance of specifying container ports and mapping them correctly
-
--------Architecture Diagram-------
-
-+--------------------+
-|   User / Browser   |
-+--------------------+
-           |
-           v
-+--------------------+
-|   Service          |  <-- Type: LoadBalancer
-| simple-webapp-svc  |
-+--------------------+
-           |
-           v
-+--------------------+
-| Deployment         |
-| simple-webapp      |  <-- Replica of Flask container
-+--------------------+
-           |
-           v
-+--------------------+
-| Docker Container   |
-| Flask App (5051)   |
-+--------------------+
